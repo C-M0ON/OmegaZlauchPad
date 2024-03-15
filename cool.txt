@@ -1,0 +1,45 @@
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
+local TextButton = Instance.new("TextButton")
+
+--Properties:
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ResetOnSpawn = false
+
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.fromRGB(254, 225, 3)
+Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame.BorderSizePixel = 6
+Frame.Position = UDim2.new(0.152654871, 0, 0.551118195, 0)
+Frame.Size = UDim2.new(0, 376, 0, 198)
+Frame.Active = true
+Frame.Draggable = true
+
+TextLabel.Parent = Frame
+TextLabel.BackgroundColor3 = Color3.fromRGB(254, 225, 3)
+TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.BorderSizePixel = 4
+TextLabel.Size = UDim2.new(0, 376, 0, 50)
+TextLabel.Font = Enum.Font.SourceSansBold
+TextLabel.Text = "OMEGA Z LAUNCHPAD"
+TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.TextSize = 14.000
+
+TextButton.Parent = Frame
+TextButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.BorderSizePixel = 0
+TextButton.Position = UDim2.new(0.0345744677, 0, 0.308080822, 0)
+TextButton.Size = UDim2.new(0, 353, 0, 127)
+TextButton.Font = Enum.Font.SourceSansBold
+TextButton.Text = "Activate!"
+TextButton.TextColor3 = Color3.fromRGB(254, 225, 3)
+TextButton.TextSize = 30.000
+TextButton.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+end)
